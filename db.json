@@ -1,0 +1,44 @@
+{
+  "articles": [
+    {
+      "id": 0,
+      "authorId": 0,
+      "title": "First Article",
+      "content": "Some description for the first article"
+    },
+    {
+      "id": 1,
+      "authorId": 0,
+      "title": "Second Article",
+      "content": "Some description for the first article"
+    },
+    {
+      "id": 2,
+      "authorId": 0,
+      "title": "Third Article",
+      "content": "Some description for the first article"
+    },
+    {
+      "id": 3,
+      "authorId": 0,
+      "title": "Fourth Article",
+      "content": "Some description for the first article"
+    }
+  ],
+  "people": [
+    {
+      "id": 0,
+      "name": "Никита",
+      "nick": "Целеустремленный",
+      "age": 21,
+      "summary": "Важный человек в жизни друга"
+    },
+    {
+      "id": 1,
+      "name": "Дейл",
+      "nick": "Ap6y3HuK/WatermelonMan",
+      "age": 22,
+      "summary": "Я целеустремленный, позитивно-мыслящий, развивающийся лидер, ведущий Правый Бой"
+    }
+  ]
+}
