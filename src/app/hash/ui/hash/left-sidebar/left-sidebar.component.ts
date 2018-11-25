@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy, ChangeDetectorRef,
   Component,
   OnDestroy,
   OnInit
@@ -13,7 +14,8 @@ import { Article } from 'app/hash/infrastructure/domain/Article';
 @Component({
   selector: 'app-left-sidebar',
   templateUrl: './left-sidebar.component.html',
-  styleUrls: ['./left-sidebar.component.scss']
+  styleUrls: ['./left-sidebar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LeftSidebarComponent implements OnInit, OnDestroy {
 
@@ -21,7 +23,8 @@ export class LeftSidebarComponent implements OnInit, OnDestroy {
 
   articles: Array<Article>;
 
-  constructor(private articleRepository: ArticleRepository) {
+  constructor(private articleRepository: ArticleRepository,
+              private changeDetectorRef: ChangeDetectorRef) {
   }
 
   ngOnInit() {
@@ -29,6 +32,7 @@ export class LeftSidebarComponent implements OnInit, OnDestroy {
         .pipe(takeUntil(this.destroy$))
         .subscribe((articles: Array<Article>) => {
           this.articles = articles;
+          this.changeDetectorRef.detectChanges();
         });
   }
 

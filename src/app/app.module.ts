@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from 'app/app.component';
 import { AppRoutingModule } from 'app/app-routing.module';
 
-import { HashModule } from 'app/hash/HashModule';
+import { HashModule } from 'app/hash/ui/hash/hash.module';
 
 @NgModule({
   declarations: [

@@ -1,0 +1,7 @@
+<div *ngIf="article"
+  class="article-container">
+  <div class="header">{{article.title}}</div>
+  <div class="content">
+    <div *ngFor="let piece of article.content">{{piece}}</div>
+  </div>
+</div>

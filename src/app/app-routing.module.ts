@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HashContentComponent } from 'app/hash/ui/hash-content/hash-content.component';
+import { HashComponent } from 'app/hash/ui/hash/hash.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HashContentComponent
+    component: HashComponent
   }
 ];
 

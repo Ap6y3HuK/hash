@@ -11,7 +11,7 @@ export function articleReducer(state: ArticleState = defaultState, action: Actio
       return { ...state, fetching: true };
 
       case Actions.ActionTypes.INIT_ARTICLES_SUCCESS:
-      return { ...state, articles: action.payload, fetched: true, fetching: false };
+      return { ...state, articles: action.payload, selectedArticle: action.payload[0],fetched: true, fetching: false };
 
     default:
       return state;

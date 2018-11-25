@@ -8,8 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
-import { HashContentComponent } from 'app/hash/ui/hash-content/hash-content.component';
-import { LeftSidebarComponent } from 'app/hash/ui/left-sidebar/left-sidebar.component';
+import { LeftSidebarComponent } from 'app/hash/ui/hash/left-sidebar/left-sidebar.component';
+import { HashComponent } from 'app/hash/ui/hash/hash.component';
+import { HashContentModule } from 'app/hash/ui/hash/hash-content/hash-content.module';
 
 import { HashResource } from 'app/hash/infrastructure/HashResource';
 import { storeSymbol } from 'app/hash/infrastructure/store/State';
@@ -25,10 +26,12 @@ import { PersonCommandDispatcher } from 'app/hash/infrastructure/store/person/Pe
 
 @NgModule({
   declarations: [
-    HashContentComponent,
+    HashComponent,
     LeftSidebarComponent
   ],
   imports: [
+    HashContentModule,
+
     MatListModule,
     MatButtonModule,
     MatIconModule,
@@ -50,7 +53,7 @@ import { PersonCommandDispatcher } from 'app/hash/infrastructure/store/person/Pe
     PersonRepository
   ],
   exports: [
-    HashContentComponent
+    HashComponent
   ]
 })
 export class HashModule {

@@ -14,4 +14,10 @@ export class ArticleRepository {
   selectArticles(): Observable<any> {
     return this.store.pipe(select((state: any) => state[storeSymbol].articles.articles));
   }
+
+  listenSelectedArticle(): Observable<any> {
+    return this.store.pipe(select((state: any) => {
+      return state[storeSymbol].articles.selectedArticle;
+    }));
+  }
 }
