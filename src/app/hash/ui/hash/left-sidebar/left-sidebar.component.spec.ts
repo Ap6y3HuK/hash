@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeftSidebarComponent } from './left-sidebar.component';
+import { LeftSidebarComponent } from 'app/hash/ui/hash/left-sidebar/left-sidebar.component';
+import { HashModule } from 'app/hash/ui/hash/hash.module';
 
 describe('LeftSidebarComponent', () => {
   let component: LeftSidebarComponent;
@@ -8,7 +9,7 @@ describe('LeftSidebarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeftSidebarComponent ]
+      imports: [HashModule]
     })
     .compileComponents();
   }));

@@ -1,8 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HashContentComponent } from './hash.component';
+import { HashContentComponent } from 'app/hash/ui/hash/hash-content/hash-content.component';
 
-describe('HashComponent', () => {
+describe('HashContentComponent', () => {
   let component: HashContentComponent;
   let fixture: ComponentFixture<HashContentComponent>;
 
